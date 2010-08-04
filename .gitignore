@@ -1,0 +1,15 @@
+obj
+bin
+Bin
+_ReSharper.*
+csproj.user
+*.resharper.user
+*.ReSharper.user
+*.resharper
+*.suo
+*.cache
+*~
+*.swp
+TestResults
+LocalTestRun.testrunconfig
+_Secure
