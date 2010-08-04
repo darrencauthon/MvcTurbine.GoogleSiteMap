@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.GoogleSiteMap.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.GoogleSiteMap.Specs", "MvcTurbine.GoogleSiteMap.Specs\MvcTurbine.GoogleSiteMap.Specs.csproj", "{791CEB81-1503-410A-B7CB-413ADB34CAB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.GoogleSiteMap.SampleApp", "MvcTurbine.GoogleSiteMap.SampleApp\MvcTurbine.GoogleSiteMap.SampleApp.csproj", "{A6D089CA-FBFA-4A36-93C9-EFB19ED7A717}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{791CEB81-1503-410A-B7CB-413ADB34CAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{791CEB81-1503-410A-B7CB-413ADB34CAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{791CEB81-1503-410A-B7CB-413ADB34CAB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D089CA-FBFA-4A36-93C9-EFB19ED7A717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D089CA-FBFA-4A36-93C9-EFB19ED7A717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D089CA-FBFA-4A36-93C9-EFB19ED7A717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D089CA-FBFA-4A36-93C9-EFB19ED7A717}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
