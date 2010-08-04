@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.GoogleSiteMap", "MvcTurbine.GoogleSiteMap\MvcTurbine.GoogleSiteMap.csproj", "{FCC5CAE8-3E4C-49D3-A970-63453AF1937F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.GoogleSiteMap.Tests", "MvcTurbine.GoogleSiteMap.Tests\MvcTurbine.GoogleSiteMap.Tests.csproj", "{4AEAEA33-31CE-4770-97C8-CAE467BEFEB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.GoogleSiteMap.Specs", "MvcTurbine.GoogleSiteMap.Specs\MvcTurbine.GoogleSiteMap.Specs.csproj", "{791CEB81-1503-410A-B7CB-413ADB34CAB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{FCC5CAE8-3E4C-49D3-A970-63453AF1937F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCC5CAE8-3E4C-49D3-A970-63453AF1937F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCC5CAE8-3E4C-49D3-A970-63453AF1937F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AEAEA33-31CE-4770-97C8-CAE467BEFEB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AEAEA33-31CE-4770-97C8-CAE467BEFEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AEAEA33-31CE-4770-97C8-CAE467BEFEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AEAEA33-31CE-4770-97C8-CAE467BEFEB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{791CEB81-1503-410A-B7CB-413ADB34CAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{791CEB81-1503-410A-B7CB-413ADB34CAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{791CEB81-1503-410A-B7CB-413ADB34CAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{791CEB81-1503-410A-B7CB-413ADB34CAB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
