@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Controllers\GoogleSitemapController.cs" />
     <Compile Include="Helpers\GoogleSiteMapProvider.cs" />
+    <Compile Include="Helpers\GoogleUrlSerializer.cs" />
     <Compile Include="Helpers\GoogleUrlSetSetSerializer.cs" />
     <Compile Include="Helpers\IGoogleUrlProvider.cs" />
     <Compile Include="Helpers\IGoogleUrlSerializer.cs" />
