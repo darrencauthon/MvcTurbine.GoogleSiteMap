@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using MvcTurbine.ComponentModel;
+﻿using MvcTurbine.ComponentModel;
 using MvcTurbine.GoogleSiteMap.Helpers;
-using MvcTurbine.GoogleSiteMap.Models;
 
 namespace MvcTurbine.GoogleSiteMap.Registration
 {
@@ -10,15 +8,7 @@ namespace MvcTurbine.GoogleSiteMap.Registration
         public void Register(IServiceLocator locator)
         {
             locator.Register<IGoogleUrlProvider, GoogleSiteMapProvider>();
-            locator.Register<IGoogleUrlSetSerializer, TempGoogleUrlSetSerializer>();
-        }
-    }
-
-    public class TempGoogleUrlSetSerializer : IGoogleUrlSetSerializer
-    {
-        public string Serialize(IEnumerable<GoogleUrl> googleUrls)
-        {
-            return "X";
+            locator.Register<IGoogleUrlSetSerializer, GoogleUrlSetSetSerializer>();
         }
     }
 }
