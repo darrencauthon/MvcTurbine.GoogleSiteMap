@@ -10,11 +10,11 @@ namespace MvcTurbine.GoogleSiteMap.Registration
         public void Register(IServiceLocator locator)
         {
             locator.Register<IGoogleUrlProvider, GoogleSiteMapProvider>();
-            locator.Register<IGoogleUrlSerializer, TempGoogleUrlSerializer>();
+            locator.Register<IGoogleUrlSetSerializer, TempGoogleUrlSetSerializer>();
         }
     }
 
-    public class TempGoogleUrlSerializer : IGoogleUrlSerializer
+    public class TempGoogleUrlSetSerializer : IGoogleUrlSetSerializer
     {
         public string Serialize(IEnumerable<GoogleUrl> googleUrls)
         {

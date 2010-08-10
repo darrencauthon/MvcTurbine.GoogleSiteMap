@@ -5,19 +5,19 @@ namespace MvcTurbine.GoogleSiteMap.Controllers
 {
     public class GoogleSiteMapController : Controller
     {
-        private readonly IGoogleUrlSerializer googleUrlSerializer;
+        private readonly IGoogleUrlSetSerializer googleUrlSetSerializer;
         private readonly IGoogleUrlProvider googleUrlProvider;
 
-        public GoogleSiteMapController(IGoogleUrlSerializer googleUrlSerializer, IGoogleUrlProvider googleUrlProvider)
+        public GoogleSiteMapController(IGoogleUrlSetSerializer googleUrlSetSerializer, IGoogleUrlProvider googleUrlProvider)
         {
-            this.googleUrlSerializer = googleUrlSerializer;
+            this.googleUrlSetSerializer = googleUrlSetSerializer;
             this.googleUrlProvider = googleUrlProvider;
         }
 
         public string Index()
         {
             var googleUrls = googleUrlProvider.GetUrls();
-            return googleUrlSerializer.Serialize(googleUrls);
+            return googleUrlSetSerializer.Serialize(googleUrls);
         }
     }
 }

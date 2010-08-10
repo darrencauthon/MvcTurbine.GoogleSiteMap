@@ -19,7 +19,7 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Controllers
             googleUrlProvider.Setup(x => x.GetUrls())
                 .Returns(googleUrls);
 
-            var serializerFake = new Mock<IGoogleUrlSerializer>();
+            var serializerFake = new Mock<IGoogleUrlSetSerializer>();
             serializerFake.Setup(x => x.Serialize(googleUrls))
                 .Returns("EXPECTED");
 
