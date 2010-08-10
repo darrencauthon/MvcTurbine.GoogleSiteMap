@@ -9,7 +9,7 @@ namespace MvcTurbine.GoogleSiteMap.Registration
     {
         public void Register(IServiceLocator locator)
         {
-            locator.Register<IGoogleUrlProvider, TempGoogleUrlProvider>();
+            locator.Register<IGoogleUrlProvider, GoogleSiteMapProvider>();
             locator.Register<IGoogleUrlSerializer, TempGoogleUrlSerializer>();
         }
     }
@@ -19,14 +19,6 @@ namespace MvcTurbine.GoogleSiteMap.Registration
         public string Serialize(IEnumerable<GoogleUrl> googleUrls)
         {
             return "X";
-        }
-    }
-
-    public class TempGoogleUrlProvider : IGoogleUrlProvider
-    {
-        public IEnumerable<GoogleUrl> GetUrls()
-        {
-            return new GoogleUrl[] {};
         }
     }
 }
