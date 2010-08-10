@@ -9,6 +9,7 @@ namespace MvcTurbine.GoogleSiteMap.Registration
         {
             locator.Register<IGoogleUrlProvider, GoogleSiteMapProvider>();
             locator.Register<IGoogleUrlSetSerializer, GoogleUrlSetSetSerializer>();
+            locator.Register<IGoogleUrlSerializer, GoogleUrlSerializer>();
         }
     }
 }
