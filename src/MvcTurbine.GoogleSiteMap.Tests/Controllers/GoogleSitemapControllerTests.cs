@@ -8,7 +8,7 @@ using Should;
 namespace MvcTurbine.GoogleSiteMap.Tests.Controllers
 {
     [TestFixture]
-    public class GoogleSitemapControllerTests
+    public class GoogleSiteMapControllerTests
     {
         [Test]
         public void Index_returns_serialized_result_from_sitemap_url_provider()
@@ -23,7 +23,7 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Controllers
             serializerFake.Setup(x => x.Serialize(googleUrls))
                 .Returns("EXPECTED");
 
-            var controller = new GoogleSitemapController(serializerFake.Object, googleUrlProvider.Object);
+            var controller = new GoogleSiteMapController(serializerFake.Object, googleUrlProvider.Object);
             var result = controller.Index();
 
             result.ShouldEqual("EXPECTED");
