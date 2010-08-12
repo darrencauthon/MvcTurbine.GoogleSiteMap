@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using MvcTurbine.GoogleSiteMap.Helpers;
 using MvcTurbine.GoogleSiteMap.Models;
 using NUnit.Framework;
@@ -70,14 +67,14 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
         {
             var expected = @"<priority";
             var googleUrl = new GoogleUrl
-            {
-                Priority = null
-            };
+                                {
+                                    Priority = null
+                                };
 
             var serializer = new GoogleUrlSerializer();
             var result = serializer.Serialize(googleUrl);
 
-            result.Contains(expected).ShouldBeFalse();            
+            result.Contains(expected).ShouldBeFalse();
         }
 
         [Test]
@@ -100,9 +97,9 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
         {
             var expected = @"<changefreq";
             var googleUrl = new GoogleUrl
-            {
-                ChangeFrequencyOption = ChangeFrequencyOption.NA
-            };
+                                {
+                                    ChangeFrequencyOption = ChangeFrequencyOption.NA
+                                };
 
             var serializer = new GoogleUrlSerializer();
             var result = serializer.Serialize(googleUrl);
@@ -116,9 +113,9 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
             var expected = "<lastmod>2010-12-26T05:12:57Z</lastmod>";
 
             var googleUrl = new GoogleUrl
-            {
-                LastModified = new DateTime(2010, 12, 25, 23, 12, 57, 3)
-            };
+                                {
+                                    LastModified = new DateTime(2010, 12, 25, 23, 12, 57, 3)
+                                };
 
             var serializer = new GoogleUrlSerializer();
             var result = serializer.Serialize(googleUrl);
@@ -132,14 +129,14 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
             var expected = "<lastmod";
 
             var googleUrl = new GoogleUrl
-            {
-                LastModified = null
-            };
+                                {
+                                    LastModified = null
+                                };
 
             var serializer = new GoogleUrlSerializer();
             var result = serializer.Serialize(googleUrl);
 
-            result.Contains(expected).ShouldBeFalse();  
+            result.Contains(expected).ShouldBeFalse();
         }
     }
 }
