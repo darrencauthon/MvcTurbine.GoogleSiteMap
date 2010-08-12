@@ -80,6 +80,34 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
             result.Contains(expected).ShouldBeFalse();            
         }
 
+        [Test]
+        public void Includes_a_changefreq_tag_with_the_lower_case_version_of_ChangeFrequency()
+        {
+            var expected = @"<changefreq>always</changefreq>";
+            var googleUrl = new GoogleUrl
+                                {
+                                    ChangeFrequencyOption = ChangeFrequencyOption.Always
+                                };
 
+            var serializer = new GoogleUrlSerializer();
+            var result = serializer.Serialize(googleUrl);
+
+            result.Contains(expected).ShouldBeTrue();
+        }
+
+        [Test]
+        public void Does_not_include_a_change_freq_tag_when_the_change_frequency_is_NA()
+        {
+            var expected = @"<changefreq";
+            var googleUrl = new GoogleUrl
+            {
+                ChangeFrequencyOption = ChangeFrequencyOption.NA
+            };
+
+            var serializer = new GoogleUrlSerializer();
+            var result = serializer.Serialize(googleUrl);
+
+            result.Contains(expected).ShouldBeFalse();
+        }
     }
 }

@@ -11,6 +11,9 @@ namespace MvcTurbine.GoogleSiteMap.Helpers
             if (googleUrl.Priority != null)
                 xml += string.Format(@"<priority>{0}</priority>", googleUrl.Priority);
 
+            if (googleUrl.ChangeFrequencyOption != ChangeFrequencyOption.NA)
+                xml += string.Format("<changefreq>{0}</changefreq>", googleUrl.ChangeFrequencyOption.ToString().ToLower());
+
             return string.Format(@"<url>{0}</url>", xml);
         }
     }

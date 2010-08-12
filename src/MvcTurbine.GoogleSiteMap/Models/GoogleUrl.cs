@@ -1,4 +1,4 @@
-﻿using System;
+﻿using MvcTurbine.GoogleSiteMap.Helpers;
 
 namespace MvcTurbine.GoogleSiteMap.Models
 {
@@ -7,5 +7,7 @@ namespace MvcTurbine.GoogleSiteMap.Models
         public string Location { get; set; }
 
         public decimal? Priority { get; set; }
+
+        public ChangeFrequencyOption ChangeFrequencyOption { get; set; }
     }
 }
