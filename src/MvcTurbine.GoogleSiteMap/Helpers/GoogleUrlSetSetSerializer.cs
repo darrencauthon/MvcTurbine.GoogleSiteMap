@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml.Linq;
 using MvcTurbine.GoogleSiteMap.Models;
 
 namespace MvcTurbine.GoogleSiteMap.Helpers
@@ -6,6 +7,21 @@ namespace MvcTurbine.GoogleSiteMap.Helpers
     public interface IGoogleUrlSetSerializer
     {
         string Serialize(IEnumerable<GoogleUrl> googleUrls);
+    }
+
+    public class FormattedGoogleUrlSetSetSerializer : GoogleUrlSetSetSerializer
+    {
+        public FormattedGoogleUrlSetSetSerializer(IGoogleUrlSerializer googleUrlSerializer)
+            : base(googleUrlSerializer)
+        {
+        }
+
+        public override string Serialize(IEnumerable<GoogleUrl> googleUrls)
+        {
+            var xml = base.Serialize(googleUrls);
+            var formattedXml = XDocument.Parse(xml).ToString();
+            return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + formattedXml;
+        }
     }
 
     public class GoogleUrlSetSetSerializer : IGoogleUrlSetSerializer
@@ -17,7 +33,7 @@ namespace MvcTurbine.GoogleSiteMap.Helpers
             this.googleUrlSerializer = googleUrlSerializer;
         }
 
-        public string Serialize(IEnumerable<GoogleUrl> googleUrls)
+        public virtual string Serialize(IEnumerable<GoogleUrl> googleUrls)
         {
             var serializedResults = string.Empty;
             foreach (var url in googleUrls)
