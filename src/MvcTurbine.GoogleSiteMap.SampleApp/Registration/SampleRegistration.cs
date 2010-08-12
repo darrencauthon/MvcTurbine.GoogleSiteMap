@@ -6,7 +6,7 @@ using MvcTurbine.GoogleSiteMap.Models;
 
 namespace MvcTurbine.GoogleSiteMap.SampleApp.Registration
 {
-    public class ContentRegistration : IServiceRegistration
+    public class SampleRegistration : IServiceRegistration
     {
         public void Register(IServiceLocator locator)
         {
