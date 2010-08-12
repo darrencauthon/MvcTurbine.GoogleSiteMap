@@ -50,5 +50,36 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
             result.Contains(expected).ShouldBeTrue();
         }
 
+        [Test]
+        public void Contains_the_priority_with_the_priority_of_the_url()
+        {
+            var expected = @"<priority>0.7</priority>";
+            var googleUrl = new GoogleUrl
+                                {
+                                    Priority = 0.7M
+                                };
+
+            var serializer = new GoogleUrlSerializer();
+            var result = serializer.Serialize(googleUrl);
+
+            result.Contains(expected).ShouldBeTrue();
+        }
+
+        [Test]
+        public void Does_not_contain_a_priority_tag_if_the_priority_is_null()
+        {
+            var expected = @"<priority";
+            var googleUrl = new GoogleUrl
+            {
+                Priority = null
+            };
+
+            var serializer = new GoogleUrlSerializer();
+            var result = serializer.Serialize(googleUrl);
+
+            result.Contains(expected).ShouldBeFalse();            
+        }
+
+
     }
 }
