@@ -14,6 +14,10 @@ namespace MvcTurbine.GoogleSiteMap.Helpers
             if (googleUrl.ChangeFrequencyOption != ChangeFrequencyOption.NA)
                 xml += string.Format("<changefreq>{0}</changefreq>", googleUrl.ChangeFrequencyOption.ToString().ToLower());
 
+            if (googleUrl.LastModified.HasValue)
+                xml += string.Format("<lastmod>{0}</lastmod>", googleUrl.LastModified.Value
+                                                                   .ToUniversalTime().ToString("u").Replace(" ", "T"));
+
             return string.Format(@"<url>{0}</url>", xml);
         }
     }

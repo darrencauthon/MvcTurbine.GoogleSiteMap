@@ -109,5 +109,37 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
 
             result.Contains(expected).ShouldBeFalse();
         }
+
+        [Test]
+        public void Includes_a_lastmod_tag_with_the_universal_version_of_LastModified()
+        {
+            var expected = "<lastmod>2010-12-26T05:12:57Z</lastmod>";
+
+            var googleUrl = new GoogleUrl
+            {
+                LastModified = new DateTime(2010, 12, 25, 23, 12, 57, 3)
+            };
+
+            var serializer = new GoogleUrlSerializer();
+            var result = serializer.Serialize(googleUrl);
+
+            result.Contains(expected).ShouldBeTrue();
+        }
+
+        [Test]
+        public void Does_not_include_a_last_mod_tag_when_the_LastModified_is_null()
+        {
+            var expected = "<lastmod";
+
+            var googleUrl = new GoogleUrl
+            {
+                LastModified = null
+            };
+
+            var serializer = new GoogleUrlSerializer();
+            var result = serializer.Serialize(googleUrl);
+
+            result.Contains(expected).ShouldBeFalse();  
+        }
     }
 }

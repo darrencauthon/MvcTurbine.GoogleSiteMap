@@ -1,4 +1,5 @@
-﻿using MvcTurbine.GoogleSiteMap.Helpers;
+﻿using System;
+using MvcTurbine.GoogleSiteMap.Helpers;
 
 namespace MvcTurbine.GoogleSiteMap.Models
 {
@@ -9,5 +10,7 @@ namespace MvcTurbine.GoogleSiteMap.Models
         public decimal? Priority { get; set; }
 
         public ChangeFrequencyOption ChangeFrequencyOption { get; set; }
+
+        public DateTime? LastModified { get; set; }
     }
 }
