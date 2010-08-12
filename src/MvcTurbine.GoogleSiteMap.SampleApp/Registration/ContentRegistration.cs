@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MvcTurbine.ComponentModel;
 using MvcTurbine.GoogleSiteMap.Helpers;
 using MvcTurbine.GoogleSiteMap.Models;
@@ -18,7 +19,16 @@ namespace MvcTurbine.GoogleSiteMap.SampleApp.Registration
     {
         public IEnumerable<GoogleUrl> GetUrls()
         {
-            return new[] {new GoogleUrl {Location = "http://localhost/Product1"}};
+            return new[]
+                       {
+                           new GoogleUrl
+                               {
+                                   Location = "http://localhost/Product1",
+                                   ChangeFrequencyOption = ChangeFrequencyOption.Always,
+                                   LastModified = DateTime.Now,
+                                   Priority = 0.5M,
+                               }
+                       };
         }
     }
 
