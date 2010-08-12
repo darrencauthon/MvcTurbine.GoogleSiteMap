@@ -68,8 +68,8 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeFrequencyOption.cs" />
     <Compile Include="Controllers\GoogleSitemapController.cs" />
-    <Compile Include="Helpers\ChangeFrequencyOption.cs" />
     <Compile Include="Helpers\GoogleSiteMapProvider.cs" />
     <Compile Include="Helpers\GoogleUrlSerializer.cs" />
     <Compile Include="Helpers\GoogleUrlSetSetSerializer.cs" />
