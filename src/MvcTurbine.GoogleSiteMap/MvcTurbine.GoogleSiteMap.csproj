@@ -74,8 +74,6 @@
     <Compile Include="Helpers\GoogleUrlSerializer.cs" />
     <Compile Include="Helpers\GoogleUrlSetSetSerializer.cs" />
     <Compile Include="Helpers\IGoogleUrlProvider.cs" />
-    <Compile Include="Helpers\IGoogleUrlSerializer.cs" />
-    <Compile Include="Helpers\IGoogleUrlSetSerializer.cs" />
     <Compile Include="Models\GoogleUrl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\Registration.cs" />

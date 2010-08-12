@@ -3,6 +3,11 @@ using MvcTurbine.GoogleSiteMap.Models;
 
 namespace MvcTurbine.GoogleSiteMap.Helpers
 {
+    public interface IGoogleUrlSetSerializer
+    {
+        string Serialize(IEnumerable<GoogleUrl> googleUrls);
+    }
+
     public class GoogleUrlSetSetSerializer : IGoogleUrlSetSerializer
     {
         private readonly IGoogleUrlSerializer googleUrlSerializer;

@@ -2,6 +2,11 @@
 
 namespace MvcTurbine.GoogleSiteMap.Helpers
 {
+    public interface IGoogleUrlSerializer
+    {
+        string Serialize(GoogleUrl googleUrl);
+    }
+
     public class GoogleUrlSerializer : IGoogleUrlSerializer
     {
         public string Serialize(GoogleUrl googleUrl)
