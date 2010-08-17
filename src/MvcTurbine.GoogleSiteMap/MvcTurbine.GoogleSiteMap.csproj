@@ -71,8 +71,8 @@
     <Compile Include="ChangeFrequencyOption.cs" />
     <Compile Include="Controllers\GoogleSitemapController.cs" />
     <Compile Include="Helpers\GoogleSiteMapProvider.cs" />
-    <Compile Include="Helpers\GoogleUrlSerializer.cs" />
-    <Compile Include="Helpers\GoogleUrlSetSerializer.cs" />
+    <Compile Include="Serialization\GoogleUrlSerializer.cs" />
+    <Compile Include="Serialization\GoogleUrlSetSerializer.cs" />
     <Compile Include="Helpers\IGoogleUrlProvider.cs" />
     <Compile Include="Models\GoogleUrl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,5 +1,6 @@
 ﻿using MvcTurbine.ComponentModel;
 using MvcTurbine.GoogleSiteMap.Helpers;
+using MvcTurbine.GoogleSiteMap.Serialization;
 
 namespace MvcTurbine.GoogleSiteMap.Registration
 {

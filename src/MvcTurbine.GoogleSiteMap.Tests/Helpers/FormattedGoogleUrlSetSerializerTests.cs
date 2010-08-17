@@ -1,6 +1,7 @@
 ﻿using Moq;
 using MvcTurbine.GoogleSiteMap.Helpers;
 using MvcTurbine.GoogleSiteMap.Models;
+using MvcTurbine.GoogleSiteMap.Serialization;
 using NUnit.Framework;
 using Should;
 

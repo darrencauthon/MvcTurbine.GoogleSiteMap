@@ -1,6 +1,6 @@
 ﻿using MvcTurbine.GoogleSiteMap.Models;
 
-namespace MvcTurbine.GoogleSiteMap.Helpers
+namespace MvcTurbine.GoogleSiteMap.Serialization
 {
     public interface IGoogleUrlSerializer
     {

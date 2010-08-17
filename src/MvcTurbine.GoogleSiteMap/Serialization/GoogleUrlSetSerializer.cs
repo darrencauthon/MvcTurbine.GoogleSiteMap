@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Linq;
+using MvcTurbine.GoogleSiteMap.Helpers;
 using MvcTurbine.GoogleSiteMap.Models;
 
-namespace MvcTurbine.GoogleSiteMap.Helpers
+namespace MvcTurbine.GoogleSiteMap.Serialization
 {
     public interface IGoogleUrlSetSerializer
     {
