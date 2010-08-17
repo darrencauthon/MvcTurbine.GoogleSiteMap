@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\GoogleSitemapControllerTests.cs" />
+    <Compile Include="Helpers\FormattedGoogleUrlSetSerializerTests.cs" />
     <Compile Include="Helpers\GoogleSiteMapProviderTests.cs" />
     <Compile Include="Helpers\GoogleUrlSerializerTests.cs" />
     <Compile Include="Helpers\GoogleUrlSetSerializerTests.cs" />
