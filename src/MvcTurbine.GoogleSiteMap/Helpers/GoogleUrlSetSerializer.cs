@@ -9,9 +9,9 @@ namespace MvcTurbine.GoogleSiteMap.Helpers
         string Serialize(IEnumerable<GoogleUrl> googleUrls);
     }
 
-    public class FormattedGoogleUrlSetSetSerializer : GoogleUrlSetSetSerializer
+    public class FormattedGoogleUrlSetSerializer : GoogleUrlSetSerializer
     {
-        public FormattedGoogleUrlSetSetSerializer(IGoogleUrlSerializer googleUrlSerializer)
+        public FormattedGoogleUrlSetSerializer(IGoogleUrlSerializer googleUrlSerializer)
             : base(googleUrlSerializer)
         {
         }
@@ -24,11 +24,11 @@ namespace MvcTurbine.GoogleSiteMap.Helpers
         }
     }
 
-    public class GoogleUrlSetSetSerializer : IGoogleUrlSetSerializer
+    public class GoogleUrlSetSerializer : IGoogleUrlSetSerializer
     {
         private readonly IGoogleUrlSerializer googleUrlSerializer;
 
-        public GoogleUrlSetSetSerializer(IGoogleUrlSerializer googleUrlSerializer)
+        public GoogleUrlSetSerializer(IGoogleUrlSerializer googleUrlSerializer)
         {
             this.googleUrlSerializer = googleUrlSerializer;
         }

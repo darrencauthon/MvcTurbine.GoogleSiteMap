@@ -8,7 +8,7 @@ namespace MvcTurbine.GoogleSiteMap.Registration
         public void Register(IServiceLocator locator)
         {
             locator.Register<IGoogleUrlProvider, GoogleSiteMapProvider>();
-            locator.Register<IGoogleUrlSetSerializer, FormattedGoogleUrlSetSetSerializer>();
+            locator.Register<IGoogleUrlSetSerializer, FormattedGoogleUrlSetSerializer>();
             locator.Register<IGoogleUrlSerializer, GoogleUrlSerializer>();
         }
     }

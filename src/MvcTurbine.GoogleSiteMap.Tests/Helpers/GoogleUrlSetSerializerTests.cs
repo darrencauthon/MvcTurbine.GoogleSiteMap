@@ -15,7 +15,7 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
             var expected = @"<?xml version=""1.0"" encoding=""UTF-8""?>
 <urlset xmlns=""http://www.google.com/schemas/sitemap/0.90"">";
 
-            var serializer = new GoogleUrlSetSetSerializer(new Mock<IGoogleUrlSerializer>().Object);
+            var serializer = new GoogleUrlSetSerializer(new Mock<IGoogleUrlSerializer>().Object);
             var result = serializer.Serialize(new GoogleUrl[] {});
             result.StartsWith(expected).ShouldBeTrue();
         }
@@ -25,7 +25,7 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
         {
             var expected = @"</urlset>";
 
-            var serializer = new GoogleUrlSetSetSerializer(new Mock<IGoogleUrlSerializer>().Object);
+            var serializer = new GoogleUrlSetSerializer(new Mock<IGoogleUrlSerializer>().Object);
             var result = serializer.Serialize(new GoogleUrl[] {});
             result.EndsWith(expected).ShouldBeTrue();
         }
@@ -40,7 +40,7 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
                 .Setup(x => x.Serialize(googleUrl))
                 .Returns("RESULTONE");
 
-            var serializer = new GoogleUrlSetSetSerializer(singleUrlSerializerFake.Object);
+            var serializer = new GoogleUrlSetSerializer(singleUrlSerializerFake.Object);
             var result = serializer.Serialize(new[] {googleUrl});
 
             result.Contains("RESULTONE").ShouldBeTrue();
@@ -60,7 +60,7 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Helpers
                 .Setup(x => x.Serialize(secondUrl))
                 .Returns("RESULTTWO");
 
-            var serializer = new GoogleUrlSetSetSerializer(singleUrlSerializerFake.Object);
+            var serializer = new GoogleUrlSetSerializer(singleUrlSerializerFake.Object);
             var result = serializer.Serialize(new[] {firstUrl, secondUrl});
 
             result.Contains("RESULTONERESULTTWO").ShouldBeTrue();
