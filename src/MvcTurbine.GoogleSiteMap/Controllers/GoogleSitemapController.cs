@@ -7,17 +7,18 @@ namespace MvcTurbine.GoogleSiteMap.Controllers
     public class GoogleSiteMapController : Controller
     {
         private readonly IGoogleUrlSetSerializer googleUrlSetSerializer;
-        private readonly IGoogleUrlProvider googleUrlProvider;
+        private readonly IGoogleSiteMapProvider googleSiteMapProvider;
 
-        public GoogleSiteMapController(IGoogleUrlSetSerializer googleUrlSetSerializer, IGoogleUrlProvider googleUrlProvider)
+        public GoogleSiteMapController(IGoogleUrlSetSerializer googleUrlSetSerializer,
+                                       IGoogleSiteMapProvider googleSiteMapProvider)
         {
             this.googleUrlSetSerializer = googleUrlSetSerializer;
-            this.googleUrlProvider = googleUrlProvider;
+            this.googleSiteMapProvider = googleSiteMapProvider;
         }
 
         public string Index()
         {
-            var googleUrls = googleUrlProvider.GetUrls();
+            var googleUrls = googleSiteMapProvider.GetUrls();
             return googleUrlSetSerializer.Serialize(googleUrls);
         }
     }

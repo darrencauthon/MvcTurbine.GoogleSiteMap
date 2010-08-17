@@ -4,7 +4,12 @@ using MvcTurbine.GoogleSiteMap.Models;
 
 namespace MvcTurbine.GoogleSiteMap.Helpers
 {
-    public class GoogleSiteMapProvider : IGoogleUrlProvider
+    public interface IGoogleSiteMapProvider
+    {
+        IEnumerable<GoogleUrl> GetUrls();
+    }
+
+    public class GoogleSiteMapProvider : IGoogleSiteMapProvider
     {
         private readonly IGoogleUrlProvider[] googleUrlProviders;
 

@@ -68,6 +68,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blades\GoogleUrlProviderBlade.cs" />
     <Compile Include="ChangeFrequencyOption.cs" />
     <Compile Include="Controllers\GoogleSitemapController.cs" />
     <Compile Include="Helpers\GoogleSiteMapProvider.cs" />

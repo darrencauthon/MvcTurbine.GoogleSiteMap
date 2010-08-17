@@ -16,7 +16,7 @@ namespace MvcTurbine.GoogleSiteMap.Tests.Controllers
         {
             var googleUrls = new GoogleUrl[] {};
 
-            var googleUrlProvider = new Mock<IGoogleUrlProvider>();
+            var googleUrlProvider = new Mock<IGoogleSiteMapProvider>();
             googleUrlProvider.Setup(x => x.GetUrls())
                 .Returns(googleUrls);
 

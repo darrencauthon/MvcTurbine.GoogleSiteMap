@@ -6,14 +6,14 @@ using MvcTurbine.GoogleSiteMap.Models;
 
 namespace MvcTurbine.GoogleSiteMap.SampleApp.Registration
 {
-    public class SampleRegistration : IServiceRegistration
-    {
-        public void Register(IServiceLocator locator)
-        {
-            locator.Register<IGoogleUrlProvider, ContentUrlProvider>("Content");
-            locator.Register<IGoogleUrlProvider, ProductUrlProvider>("Product");
-        }
-    }
+    //public class SampleRegistration : IServiceRegistration
+    //{
+    //    public void Register(IServiceLocator locator)
+    //    {
+    //        locator.Register<IGoogleUrlProvider, ContentUrlProvider>("Content");
+    //        locator.Register<IGoogleUrlProvider, ProductUrlProvider>("Product");
+    //    }
+    //}
 
     public class ProductUrlProvider : IGoogleUrlProvider
     {
