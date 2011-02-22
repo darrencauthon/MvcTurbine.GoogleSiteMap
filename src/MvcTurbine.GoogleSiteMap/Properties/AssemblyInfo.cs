@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("DEG")]
 [assembly: AssemblyProduct("MvcTurbine.GoogleSiteMap")]
-[assembly: AssemblyCopyright("Copyright © DEG 2010")]
+[assembly: AssemblyCopyright("Copyright © Darren Cauthon 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
